@@ -23,4 +23,4 @@ def Fapoonanator(*args):
     
     return response
     
-print(Fapoonanator("Breakfast","Lunch"))
+print(Fapoonanator("Spoon", "Fork"))
