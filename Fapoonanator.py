@@ -1,7 +1,7 @@
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
-def Fapoonanator(*args):
+def fapoonanator(*args):
     
     system_message = """
     You are a word combiner. You will return the portmanteau of the given words. 
@@ -23,4 +23,3 @@ def Fapoonanator(*args):
     
     return response
     
-print(Fapoonanator("Spoon", "Fork"))

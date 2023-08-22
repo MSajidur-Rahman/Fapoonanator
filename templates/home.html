@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Fapoonanator</title>
+</head>
+<body>
+    <h1>Fapoonanator</h1>
+    <form method="post">
+        <label for="word1">Enter the first word:</label>
+        <input type="text" id="word1" name="word1" required><br><br>
+        
+        <label for="word2">Enter the second word:</label>
+        <input type="text" id="word2" name="word2" required><br><br>
+        
+        <input type="submit" value="Fapoonanate">
+    </form>
+    <br>
+
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+    
+</body>
+</html>
