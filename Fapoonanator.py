@@ -1,5 +1,5 @@
-import langchain.chat_models 
-import langchain.prompts 
+import langchain 
+import langchain
 
 from flask import Flask, request, render_template
 
