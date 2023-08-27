@@ -1,24 +1,94 @@
-<html>
-<head>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fapoonanator</title>
+    <style>
+        /* New styles with updated colors and geometric background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A7BEAE; /* teal background */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #317773; /* Change header background color */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #317773; /* Change button background color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #317773; /* Change button hover background color */
+        }
+
+        /* Result section */
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fapoonanator</h1>
-    <form method="post">
-        <label for="word1">Enter the first word:</label>
-        <input type="text" id="word1" name="word1" required><br><br>
-        
-        <label for="word2">Enter the second word:</label>
-        <input type="text" id="word2" name="word2" required><br><br>
-        
-        <input type="submit" value="Fapoonanate">
-    </form>
-    <br>
- 
-    {% if result %}
-    <h2>Result:</h2>
-    <p>{{ result }}</p>
-    {% endif %}
-    
-</body>
-</html>
+    <header>
+        <h1>Fapoonanator</h1>
+    </header>
+    <div class="container">
+        <form method="post">
+            <label for="word1">Enter the first word:</label>
+            <input type="text" id="word1" name="word1" required="">
+            
+            <label for="word2">Enter the second word:</label>
+            <input type="text" id="word2" name="word2" required="">
+            
+            <input type="submit" value="Fapoonanate">
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h2>Result:</h2>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+
+</body></html>
