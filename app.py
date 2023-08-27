@@ -1,5 +1,6 @@
-import langchain 
-import langchain
+from langchain.prompts import ChatPromptTemplate
+
+from langchain.chat_models import ChatOpenAI
 
 from flask import Flask, request, render_template
 
@@ -14,11 +15,11 @@ def fapoonanator(*args):
     Spoon, Fork = Fapoon
     Hotel, Motor = Hotor"
     """
-    template = langchain.prompts.ChatPromptTemplate.from_messages([
+    template = ChatPromptTemplate.from_messages([
         ("system", system_message),     
         ("human", "{words}")])
     
-    llm = langchain.chat_models.ChatOpenAI(model_name="gpt-3.5-turbo", temperature = 0)
+    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature = 0)
     
     formatted_template = template.format_messages(words = str(args))
     
