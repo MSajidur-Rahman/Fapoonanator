@@ -39,3 +39,5 @@ def index():
         result = fapoonanator(word1, word2)
     return render_template("home.html", result=result)
 
+if __name__ == '__main__':
+    app.run(port=8080)
